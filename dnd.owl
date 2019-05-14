@@ -6,299 +6,337 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/joao/ontologies/2019/4/untitled-ontology-3">
+    <Prefix name="" IRI="http://www.semanticweb.org/joao/ontologies/2019/4/untitled-ontology-3"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Halfling"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Action"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Armor"/>
+        <DataProperty IRI="#Ability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Attack"/>
+        <Class IRI="#Mountain_Dwarf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dragon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Favored_Enemy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Investigation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Common"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Barbarian"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Cast_a_Spell"/>
+        <Class IRI="#Monk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#d10"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sorcerous_Origin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#type_is"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dexterity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Undercommon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Sleight_of_Hand"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Performance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sorcerer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Armor"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Character"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Class"/>
+        <Class IRI="#Race"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Cleric"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Common"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Divine_Domain"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Draconic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dragon"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dwarf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dwarvish"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Elf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Elvish"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Equipment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Expertise_Sneak_Attack"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Favored_Enemy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Features"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Fighter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Fighting_Style"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Half-Elf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Half-Orc"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Halfling"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#High_Elf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Hill_Dwarf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Hit_Dice"/>
+        <ObjectProperty IRI="#class_is"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Human"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Humanoid"/>
+        <DataProperty IRI="#Armor_Class"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Language"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Large"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Martial_Arts"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Medium"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Melee_Attack"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Monk"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Mountain_Dwarf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Natural_Explorer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Race"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Rage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Ranged_Attack"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Ranger"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Rogue"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Second_Wind"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Size"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Small"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Sorcerer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Sorcerous_Origin"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Spellcasting"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Unarmored_Defense"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Undead"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Undercommon"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Weapon"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Wood_Elf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#d10"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#d12"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#d6"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#d8"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Ability"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Acrobatics"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Animal_Handling"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Arcana"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Armor_Class"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Athletics"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#Character_Stats"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Charisma"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Constitution"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Damage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Deception"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Dexterity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#History"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Hit_Points"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Hours_of_Sleep"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Insight"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Intelligente"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Intimidation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Investigation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Long_Range"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Medicine"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Nature"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Normal_Range"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Perception"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#Performance"/>
+        <DataProperty IRI="#Arcana"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Persuasion"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#Insight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Draconic"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#Range"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Religion"/>
+        <NamedIndividual IRI="#Barbarian"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Skill"/>
+        <Class IRI="#Humanoid"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Sleight_of_Hand"/>
+        <Class IRI="#Ranged_Attack"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Sorcery_Points"/>
+        <DataProperty IRI="#Intelligente"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Speed"/>
+        <Class IRI="#Elf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#Stealth"/>
+        <Class IRI="#Large"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Charisma"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#d6"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Melee_Attack"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Normal_Range"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Class"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Athletics"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Animal_Handling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spellcasting"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Deception"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Nature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High_Elf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ranger"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Perception"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Strength"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Weapon"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#Survival"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Natural_Explorer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Acrobatics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elvish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#d12"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Undead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dwarvish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hill_Dwarf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Monk"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Medicine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hit_Dice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unarmored_Defense"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Skill"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wood_Elf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Sorcery_Points"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Constitution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spell_Attack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Martial_Arts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#History"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#race_is"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sorcerer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#size_is"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Religion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Small"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Weapon_Stats"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Dwarf"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#Wisdom"/>
     </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Long_Range"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ranger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#d8"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Stealth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Intimidation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Hours_of_Sleep"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Barbarian"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Character"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#class_is"/>
+                <NamedIndividual IRI="#Barbarian"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Monk"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Character"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#class_is"/>
+                <NamedIndividual IRI="#Monk"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ranger"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Character"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#class_is"/>
+                <NamedIndividual IRI="#Ranger"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sorcerer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Character"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#class_is"/>
+                <NamedIndividual IRI="#Sorcerer"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Armor"/>
         <Class IRI="#Equipment"/>
@@ -309,23 +347,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Barbarian"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Cast_a_Spell"/>
-        <Class IRI="#Action"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Cleric"/>
-        <Class IRI="#Class"/>
+        <Class IRI="#Character"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Common"/>
         <Class IRI="#Language"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Divine_Domain"/>
-        <Class IRI="#Features"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Draconic"/>
@@ -352,28 +378,8 @@
         <Class IRI="#Language"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Expertise_Sneak_Attack"/>
-        <Class IRI="#Features"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Favored_Enemy"/>
         <Class IRI="#Features"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fighter"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fighting_Style"/>
-        <Class IRI="#Features"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Half-Elf"/>
-        <Class IRI="#Race"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Half-Orc"/>
-        <Class IRI="#Race"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Halfling"/>
@@ -413,7 +419,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Monk"/>
-        <Class IRI="#Class"/>
+        <Class IRI="#Character"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mountain_Dwarf"/>
@@ -433,15 +439,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ranger"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Rogue"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Second_Wind"/>
-        <Class IRI="#Features"/>
+        <Class IRI="#Character"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Small"/>
@@ -449,11 +447,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sorcerer"/>
-        <Class IRI="#Class"/>
+        <Class IRI="#Character"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sorcerous_Origin"/>
         <Class IRI="#Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spell_Attack"/>
+        <Class IRI="#Attack"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Spellcasting"/>
@@ -479,22 +481,78 @@
         <Class IRI="#Wood_Elf"/>
         <Class IRI="#Elf"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#d10"/>
+    <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Barbarian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Monk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Ranger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Sorcerer"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hit_Dice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#d12"/>
+        <NamedIndividual IRI="#d10"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hit_Dice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#d6"/>
+        <NamedIndividual IRI="#d12"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hit_Dice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#d8"/>
+        <NamedIndividual IRI="#d6"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hit_Dice"/>
-    </SubClassOf>
+        <NamedIndividual IRI="#d8"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#class_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#race_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#size_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#type_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#race_is"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#size_is"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#type_is"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#race_is"/>
+        <Class IRI="#Race"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#size_is"/>
+        <Class IRI="#Size"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#type_is"/>
+        <Class IRI="#Type"/>
+    </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#Ability"/>
         <DataProperty IRI="#Character_Stats"/>
@@ -660,7 +718,27 @@
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#Constitution"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#Damage"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Dexterity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Hit_Points"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Hours_of_Sleep"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Intelligente"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -668,12 +746,20 @@
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#Strength"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#Weapon_Stats"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Wisdom"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
