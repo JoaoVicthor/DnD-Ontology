@@ -13,13 +13,7 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#Action"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Armor"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Attack"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Barbarian"/>
@@ -58,9 +52,6 @@
         <Class IRI="#Language"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Melee_Attack"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Monk"/>
     </Declaration>
     <Declaration>
@@ -70,9 +61,6 @@
         <Class IRI="#Race"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ranged_Attack"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Ranger"/>
     </Declaration>
     <Declaration>
@@ -80,9 +68,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Sorcerer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Spell_Attack"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Weapon"/>
@@ -226,6 +211,9 @@
         <NamedIndividual IRI="#Arcane_Focus"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Barbarian"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Common_Language"/>
     </Declaration>
     <Declaration>
@@ -250,6 +238,9 @@
         <NamedIndividual IRI="#Great_Axe"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Halfling"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Halfling_Dexterity"/>
     </Declaration>
     <Declaration>
@@ -257,6 +248,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Hand_Axe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High_Elf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hill_Dwarf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Human"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Leather_Armor"/>
@@ -274,6 +274,12 @@
         <NamedIndividual IRI="#Medium"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Monk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mountain_Dwarf"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Natural_Explorer"/>
     </Declaration>
     <Declaration>
@@ -283,10 +289,16 @@
         <NamedIndividual IRI="#Rage"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ranger"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Short_Sword"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Small"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sorcerer"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sorcerous_Origin"/>
@@ -295,12 +307,18 @@
         <NamedIndividual IRI="#Spellcasting"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Um_Halfling_Qualquer"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Unarmored_Defense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wood_Elf"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Barbarian"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Class"/>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#has_feature"/>
                 <NamedIndividual IRI="#Rage"/>
@@ -320,23 +338,19 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Character"/>
+        <Class IRI="#Human"/>
         <ObjectIntersectionOf>
             <Class IRI="#Character"/>
-            <ObjectExactCardinality cardinality="1">
+            <ObjectHasValue>
                 <ObjectProperty IRI="#class_is"/>
-                <Class IRI="#Class"/>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#race_is"/>
-                <Class IRI="#Race"/>
-            </ObjectExactCardinality>
+                <NamedIndividual IRI="#Human"/>
+            </ObjectHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Monk"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Class"/>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#has_feature"/>
                 <NamedIndividual IRI="#Martial_Arts"/>
@@ -354,7 +368,7 @@
     <EquivalentClasses>
         <Class IRI="#Ranger"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Class"/>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#has_feature"/>
                 <NamedIndividual IRI="#Favored_Enemy"/>
@@ -376,7 +390,7 @@
     <EquivalentClasses>
         <Class IRI="#Sorcerer"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Class"/>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#has_feature"/>
                 <NamedIndividual IRI="#Sorcerous_Origin"/>
@@ -400,30 +414,37 @@
         <Class IRI="#Equipment"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Attack"/>
-        <Class IRI="#Action"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Barbarian"/>
-        <Class IRI="#Class"/>
+        <Class IRI="#Character"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#class_is"/>
+                <Class IRI="#Class"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#race_is"/>
+                <Class IRI="#Race"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#size_is"/>
+                <Class IRI="#Size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dwarf"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Race"/>
-            <ObjectIntersectionOf>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Common_Language"/>
-                </ObjectHasValue>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Dwarf_Language"/>
-                </ObjectHasValue>
-            </ObjectIntersectionOf>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#size_is"/>
                 <NamedIndividual IRI="#Small"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Common_Language"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Dwarf_Language"/>
             </ObjectHasValue>
             <DataMinCardinality cardinality="2">
                 <DataProperty IRI="#Constitution"/>
@@ -433,20 +454,18 @@
     <SubClassOf>
         <Class IRI="#Elf"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Race"/>
-            <ObjectIntersectionOf>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Common_Language"/>
-                </ObjectHasValue>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Elfic_Language"/>
-                </ObjectHasValue>
-            </ObjectIntersectionOf>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#size_is"/>
                 <NamedIndividual IRI="#Medium"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Common_Language"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Elfic_Language"/>
             </ObjectHasValue>
             <DataMinCardinality cardinality="2">
                 <DataProperty IRI="#Dexterity"/>
@@ -456,17 +475,7 @@
     <SubClassOf>
         <Class IRI="#Halfling"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Race"/>
-            <ObjectIntersectionOf>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Common_Language"/>
-                </ObjectHasValue>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Halfling_Language"/>
-                </ObjectHasValue>
-            </ObjectIntersectionOf>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#has_feature"/>
                 <NamedIndividual IRI="#Halfling_Dexterity"/>
@@ -474,6 +483,14 @@
             <ObjectHasValue>
                 <ObjectProperty IRI="#size_is"/>
                 <NamedIndividual IRI="#Small"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Common_Language"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Halfling_Language"/>
             </ObjectHasValue>
             <DataMinCardinality cardinality="2">
                 <DataProperty IRI="#Dexterity"/>
@@ -509,21 +526,19 @@
     <SubClassOf>
         <Class IRI="#Human"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Race"/>
-            <ObjectIntersectionOf>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <NamedIndividual IRI="#Common_Language"/>
-                </ObjectHasValue>
-                <ObjectMinCardinality cardinality="2">
-                    <ObjectProperty IRI="#speaks_in"/>
-                    <Class IRI="#Language"/>
-                </ObjectMinCardinality>
-            </ObjectIntersectionOf>
+            <Class IRI="#Character"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#size_is"/>
                 <NamedIndividual IRI="#Medium"/>
             </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#speaks_in"/>
+                <NamedIndividual IRI="#Common_Language"/>
+            </ObjectHasValue>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#speaks_in"/>
+                <Class IRI="#Language"/>
+            </ObjectMinCardinality>
             <DataMinCardinality cardinality="1">
                 <DataProperty IRI="#Charisma"/>
             </DataMinCardinality>
@@ -545,14 +560,6 @@
         </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Melee_Attack"/>
-        <Class IRI="#Attack"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Monk"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Mountain_Dwarf"/>
         <ObjectIntersectionOf>
             <Class IRI="#Dwarf"/>
@@ -564,22 +571,6 @@
                 <DataProperty IRI="#Strength"/>
             </DataMinCardinality>
         </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Ranged_Attack"/>
-        <Class IRI="#Attack"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Ranger"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sorcerer"/>
-        <Class IRI="#Class"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Spell_Attack"/>
-        <Class IRI="#Attack"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Weapon"/>
@@ -617,6 +608,10 @@
         <NamedIndividual IRI="#Arcane_Focus"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Barbarian"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Language"/>
         <NamedIndividual IRI="#Common_Language"/>
     </ClassAssertion>
@@ -649,6 +644,10 @@
         <NamedIndividual IRI="#Great_Axe"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Race"/>
+        <NamedIndividual IRI="#Halfling"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#Halfling_Dexterity"/>
     </ClassAssertion>
@@ -657,8 +656,28 @@
         <NamedIndividual IRI="#Halfling_Language"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Race"/>
+        <NamedIndividual IRI="#High_Elf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Race"/>
+        <NamedIndividual IRI="#Hill_Dwarf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Race"/>
+        <NamedIndividual IRI="#Human"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Armor"/>
         <NamedIndividual IRI="#Leather_Armor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#High_Elf"/>
+        <NamedIndividual IRI="#Legolas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ranger"/>
+        <NamedIndividual IRI="#Legolas"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Weapon"/>
@@ -673,6 +692,14 @@
         <NamedIndividual IRI="#Medium"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Monk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Race"/>
+        <NamedIndividual IRI="#Mountain_Dwarf"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#Natural_Explorer"/>
     </ClassAssertion>
@@ -685,12 +712,20 @@
         <NamedIndividual IRI="#Rage"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Ranger"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Weapon"/>
         <NamedIndividual IRI="#Short_Sword"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Size"/>
         <NamedIndividual IRI="#Small"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Class"/>
+        <NamedIndividual IRI="#Sorcerer"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Feature"/>
@@ -703,6 +738,10 @@
     <ClassAssertion>
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#Unarmored_Defense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Race"/>
+        <NamedIndividual IRI="#Wood_Elf"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Arcane_Focus"/>
@@ -713,6 +752,12 @@
         <NamedIndividual IRI="#Short_Sword"/>
     </DifferentIndividuals>
     <DifferentIndividuals>
+        <NamedIndividual IRI="#Barbarian"/>
+        <NamedIndividual IRI="#Monk"/>
+        <NamedIndividual IRI="#Ranger"/>
+        <NamedIndividual IRI="#Sorcerer"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
         <NamedIndividual IRI="#Common_Language"/>
         <NamedIndividual IRI="#Dwarf_Language"/>
         <NamedIndividual IRI="#Elfic_Language"/>
@@ -739,19 +784,42 @@
         <NamedIndividual IRI="#Hand_Axe"/>
     </DifferentIndividuals>
     <DifferentIndividuals>
+        <NamedIndividual IRI="#Halfling"/>
+        <NamedIndividual IRI="#High_Elf"/>
+        <NamedIndividual IRI="#Hill_Dwarf"/>
+        <NamedIndividual IRI="#Human"/>
+        <NamedIndividual IRI="#Mountain_Dwarf"/>
+        <NamedIndividual IRI="#Wood_Elf"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
         <NamedIndividual IRI="#Medium"/>
         <NamedIndividual IRI="#Small"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#has_feature"/>
-        <NamedIndividual IRI="#Legolas"/>
-        <NamedIndividual IRI="#Elfic_Weapon_Training"/>
+        <NamedIndividual IRI="#Um_Halfling_Qualquer"/>
+        <NamedIndividual IRI="#Halfling_Dexterity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#starts_with"/>
-        <NamedIndividual IRI="#Legolas"/>
-        <NamedIndividual IRI="#Short_Sword"/>
+        <ObjectProperty IRI="#size_is"/>
+        <NamedIndividual IRI="#Um_Halfling_Qualquer"/>
+        <NamedIndividual IRI="#Small"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#speaks_in"/>
+        <NamedIndividual IRI="#Um_Halfling_Qualquer"/>
+        <NamedIndividual IRI="#Common_Language"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#speaks_in"/>
+        <NamedIndividual IRI="#Um_Halfling_Qualquer"/>
+        <NamedIndividual IRI="#Halfling_Language"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Dexterity"/>
+        <NamedIndividual IRI="#Um_Halfling_Qualquer"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#class_is"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
